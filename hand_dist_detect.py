@@ -49,9 +49,10 @@ while cap.isOpened():
             mp_draw.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
             if distance < 20:
-                winsound.Beep(1000,200)
+                winsound.Beep(1000,100)
 
-    cv2.imshow('Hand Distance Measurement', frame)
+    resized_frame = cv2.resize(frame, (480, 360))
+    cv2.imshow('Hand Distance Measurement', resized_frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

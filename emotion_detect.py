@@ -12,7 +12,8 @@ while True:
     #text, org, font,font scale,color,thickness
     cv2.putText(img, f'Emotion: {emotion}',(50,50),cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0),2)
 
-    cv2.imshow("Emotion Recognition",img)
+    resized_img = cv2.resize(img, (480, 360))
+    cv2.imshow("Emotion Recognition",resized_img)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

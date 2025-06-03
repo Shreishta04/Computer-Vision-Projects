@@ -23,7 +23,8 @@ while True:
                 x, y = int(point.x * img.shape[1]), int(point.y * img.shape[0])
                 cv2.circle(img, (x, y), 1, (0, 255, 0), -1)
 
+    resized_img = cv2.resize(img, (480, 360))
     #display the image in a window
-    cv2.imshow("my_video",img)
+    cv2.imshow("my_video",resized_img)
     #it constantly captures image by image so we wait a second to keep it from getting stuck
     cv2.waitKey(1)
