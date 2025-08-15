@@ -1,5 +1,3 @@
-Computer Vision Projects – Real-Time Detection and Analysis
-
 This repository contains three Python-based real-time computer vision applications using OpenCV, MediaPipe, DeepFace, and NumPy.
 Each project uses webcam input for live detection, processing, and visualization.
 
